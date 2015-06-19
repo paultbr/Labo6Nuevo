@@ -7,11 +7,15 @@ $username=$_POST['usuario'];
 //	$username=$_POST['mail'];
 $pass=$_POST['pass1'];
 
+session_start();
+$_SESSION['usuario']=$username;
+$_SESSION['clave']=$pass;
+
 
 
 /*----ADMINISTRADOR-----*/
 /*$sql2=mysql_query("SELECT * FROM tadministrador WHERE idadministrador ='$username'");*/
-$sql3=mysql_query("SELECT * FROM tusuario INNER JOIN tadministrador ON tusuario.idusuario = tadministrador.idusuario");
+/*$sql3=mysql_query("SELECT * FROM tusuario INNER JOIN tadministrador ON tusuario.idusuario = tadministrador.idusuario");
 if($f2=mysql_fetch_array($sql3)){
     if($pass==$f2['password']){
         if($username==$f2['idadministrador'])
@@ -23,7 +27,7 @@ if($f2=mysql_fetch_array($sql3)){
 }
 
 /*----AUXILIAR----*/
-$sql5=mysql_query("SELECT * FROM tusuario INNER JOIN tauxiliar ON tusuario.idusuario = tauxiliar.idusuario");
+/*$sql5=mysql_query("SELECT * FROM tusuario INNER JOIN tauxiliar ON tusuario.idusuario = tauxiliar.idusuario");
 if($f4=mysql_fetch_array($sql5)){
     if($pass==$f4['password']){
         if($username==$f4['idauxiliar'])
@@ -36,26 +40,28 @@ if($f4=mysql_fetch_array($sql5)){
 
 
 /*----APODERADO----*/
-$sql4=mysql_query("SELECT * FROM tusuario INNER JOIN tapoderado ON tusuario.idusuario = tapoderado.idusuario");
+//$sql4=mysql_query("SELECT * FROM tusuario INNER JOIN tapoderado ON tusuario.idusuario = tapoderado.idusuario");
+/*$sql4=mysql_query("SELECT * from tusuario INNER JOIN tapoderado on tusuario.idusuario = tapoderado.idusuario WHERE tapoderado.idapoderado ='$username'");
 if($f3=mysql_fetch_array($sql4)){
     if($pass==$f3['password']){
         if($username==$f3['idapoderado'])
+        {
             echo '<script>alert("BIENVENIDO PADRE DE FAMILIA")</script> ';
-
-        echo "<script>location.href='index232.php'</script>";
-
+            echo "<script>location.href='indexapoderado.php'</script>";
+        }
     }
 }
 
 /*----DOCENTE----*/
-$sql4=mysql_query("SELECT * FROM tusuario INNER JOIN tdocente ON tusuario.idusuario = tdocente.idusuario");
-if($f3=mysql_fetch_array($sql4)){
+$sql=mysql_query("SELECT * from tusuario INNER JOIN tdocente on tusuario.idusuario = tdocente.idusuario WHERE tdocente.iddocente ='$username'");
+//$sql4=mysql_query("SELECT * FROM tusuario INNER JOIN tdocente ON tusuario.idusuario = tdocente.idusuario");
+if($f3=mysql_fetch_array($sql)){
     if($pass==$f3['password']){
-        if($username==$f3['idapoderado'])
+        if($username==$f3['iddocente'])
+        {
             echo '<script>alert("BIENVENIDO PROFESOR")</script> ';
-
-        echo "<script>location.href='index232.php'</script>";
-
+        	echo "<script>location.href='indexdocente.php'</script>";
+    	}
     }
 }
 

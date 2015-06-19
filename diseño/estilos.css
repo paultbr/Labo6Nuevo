@@ -19,6 +19,20 @@ h1,h2,h4{
 		font-family:taoma;/*tipo de letra*/
 		color:white;
 	}
+	h5{
+		font-size: 30px;
+		text-align: center;
+		font-family:taoma;/*tipo de letra*/
+		color:white;/*color*/
+		height: 60px;
+	}
+	h6{
+		font-size: 50px;
+		text-align: center;
+		font-family:taoma;/*tipo de letra*/
+		color:white;/*color*/
+		height: 80px;
+	}
 /*botones*/
 input[type=submit],form a{
 		background: red;
@@ -164,6 +178,45 @@ nav > ul > li > a:hover > span {
 		left: 450px;
 	    position:relative;
 	}
+
+#tooplate_fecha{ 
+    font-size: 20px; 
+    height: 30px;
+	margin-left: 900px;
+    color: #F80000; 
+    font-family: "times new roman";
+}
+
+#tooplate_hora{ 
+    font-size: 20px; 
+    height: 80px;
+	margin-left: 1000px;
+    color: #F80000; 
+    font-family: "times new roman";
+}
+
+#mid_title { 
+    font-size: 25px; 
+    font-weight: 300; 
+    color: #F80000; 
+    font-family: "times new roman";
+    margin-bottom: 20px; 
+    text-shadow: 1px 1px 3px #000; 
+    line-height: 1.5em;
+    text-align: center;
+}
+
+table, td, th {
+    border: 1px solid red;
+    color: white;
+}
+
+th {
+    background-color: red;
+    color: white;
+}
+
+
 /*slider*/
 #contenedor {
 	width: 800px;
