@@ -19,7 +19,11 @@
                     		<li><a href="usuario/auxiliar.php">Auxiliar</a></li>
                     </ul>
      			</li>
-     			<li><a href="#"><span class=""><i class="icon icon-users"></i></span>???????</a></li>
+     			<li><a href="#"><span class=""><i class="icon icon-users"></i></span>Boletines</a>
+                    <ul>
+                              <li><a href="Boletines/SolicitarBoletin.php">Publicar Boletin</a></li>
+                    </ul>
+                    </li>
      			<li><a href="#"><span class=""><i class="icon icon-mobile2"></i></span>???????</a></li>
      			<li><a href="#"><span class=""><i class="icon icon-happy"></i></span>??????</a></li>
      		</ul>
